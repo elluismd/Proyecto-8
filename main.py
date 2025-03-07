@@ -265,10 +265,10 @@ class TestUrbanRoutes:
         # 2.Seleccionar la tarifa Comfort.
         routes_page.select_taxi_button()
 
-        # 3.Rellenar el número de teléfono
+        # 3. Rellenar el número de teléfono
         phone_number = data.phone_number
-        self.driver.implicitly_wait(10)  # cambio del timeslep
-        routes_page.set_phone()
+        self.driver.implicitly_wait(10)  # Cambio de time.sleep a implicitly_wait
+        routes_page.set_phone(phone_number)  # Pasar el número como argumento
         assert routes_page.get_phone() == phone_number
 
         # 4.Agregar una tarjeta de crédito.
@@ -294,7 +294,7 @@ class TestUrbanRoutes:
         self.driver.implicitly_wait(50)  # cambio del timeslep
         routes_page.search_taxi()
 
-        # 9.Esperar a que aparezca la información del conductor en el modal
+        # 9.Esperar a que aparezca la información del conductor en el modal (Esta prueba es opcional)
         self.driver.implicitly_wait(50)  # aumentar tiempo
         routes_page.wait_for_driver_info()
 

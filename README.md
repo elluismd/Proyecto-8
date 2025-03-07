@@ -19,13 +19,12 @@ José Luis Meza Diyarza/Proyecto No.8, grupo 22
 
 
 ## Instalar lo siguiente:
-pip install selenium
-pip3 install selenium
-request
-pytest
+1. pip install selenium
+2. pip3 install selenium
+3. request
+* Asegúrate de estar en el directorio. donde se encuentran las pruebas. Luego, ejecuta las pruebas utilizando (pytest)
    
 ## Herramientas que se utilizaron.
-GitHub
-PyCharm
-GoogleChrome
-Urban Routes
+1. PyCharm
+2. GoogleChrome
+3. Urban Routes
