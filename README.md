@@ -18,13 +18,13 @@ José Luis Meza Diyarza/Proyecto No.8, grupo 22
 9. Esperar a que aparezca la información del conductor en el modal
 
 
-1. Instalar lo siguiente:
+## Instalar lo siguiente:
 pip install selenium
 pip3 install selenium
 request
 pytest
    
-2. Herramientas que se utilizaron.
+## Herramientas que se utilizaron.
 GitHub
 PyCharm
 GoogleChrome
