@@ -22,7 +22,7 @@ José Luis Meza Diyarza/Proyecto No.8, grupo 22.
 * pip install selenium.
 * pip3 install selenium.
 * request.
-* Asegúrate de estar en el directorio correcto antes de iniciar las pruebas. "main.py", donde se encuentran las pruebas.
+* Asegúrate de estar en el directorio correcto antes de iniciar las pruebas. "main.py", donde se encuentran las pruebas, (pytest)
    
 ## Herramientas que se utilizaron.
 * GitHub. 
