@@ -255,6 +255,7 @@ class TestUrbanRoutes:
         routes_page = UrbanRoutesPage(self.driver)
 
         # 1.Configurar la dirección
+    def test_set_route(self):
         address_from = data.address_from
         address_to = data.address_to
         self.driver.implicitly_wait(10)  # cambio del timeslep
@@ -263,38 +264,45 @@ class TestUrbanRoutes:
         assert routes_page.get_to() == address_to
 
         # 2.Seleccionar la tarifa Comfort.
-        routes_page.select_taxi_button()
+    def test_pick_comfort(self):
+            routes_page.select_taxi_button()
 
         # 3. Rellenar el número de teléfono
+    def test_set_phone_number(self):
         phone_number = data.phone_number
         self.driver.implicitly_wait(10)  # Cambio de time.sleep a implicitly_wait
         routes_page.set_phone(phone_number)  # Pasar el número como argumento
         assert routes_page.get_phone() == phone_number
 
         # 4.Agregar una tarjeta de crédito.
-        def test_add_credit_card(self):
+    def test_add_credit_card(self):
             self.routes_page.validate_card_number(data.card_number)
 
         # 5.Escribir un mensaje para el controlador
+    def test_set_message(self):
         message = data.message_for_driver
         routes_page.write_drive_message(message)
         assert routes_page.get_message() == data.message_for_driver  # agregar assert
 
         # 6.Pedir una manta y pañuelos
+    def test_set_requirements(self):
         self.driver.implicitly_wait(20)  # cambio del timeslep
         routes_page.request_blanket_and_tissues()
         assert routes_page.get_blanket_and_scarves() == routes_page.request_blanket_and_tissues()  # agregar assert
 
         # 7.Pedir 2 helados
+     def test_call_taxi(self):
         self.driver.implicitly_wait(20)  # cambio del timeslep
         routes_page.request_ice_cream()
         assert routes_page.get_ice_cream() == routes_page.request_ice_cream()  # agregar Assert
 
         # 8.Aparece el modal para buscar un taxi.
+    def test_wait_driver_details(self):
         self.driver.implicitly_wait(50)  # cambio del timeslep
         routes_page.search_taxi()
 
         # 9.Esperar a que aparezca la información del conductor en el modal (Esta prueba es opcional)
+    def test_wait_for_driver_info(self):
         self.driver.implicitly_wait(50)  # aumentar tiempo
         routes_page.wait_for_driver_info()
 
