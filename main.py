@@ -291,7 +291,7 @@ class TestUrbanRoutes:
         assert routes_page.get_blanket_and_scarves() == routes_page.request_blanket_and_tissues()  # agregar assert
 
         # 7.Pedir 2 helados
-     def test_call_taxi(self):
+    def test_request_ice_cream(self):
         self.driver.implicitly_wait(20)  # cambio del timeslep
         routes_page.request_ice_cream()
         assert routes_page.get_ice_cream() == routes_page.request_ice_cream()  # agregar Assert
